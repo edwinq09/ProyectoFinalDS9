@@ -1,0 +1,46 @@
+body {
+    background-color: #2c2b2b;
+}
+
+.card {
+    background-color: #221b1b;
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.borde {
+    background-color: #221b1b;
+    padding: 0.3rem;
+    width: 98.5%;
+    position: absolute;
+    top: 25%;
+
+}
+
+.botton-Iniciar {
+    width: 100px;
+    position: absolute;
+    top: 10%;
+    left: 84.5%;
+}
+
+.botton-registar {
+    width: 100px;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+}
+
+.Label {
+    color: #634911;
+    font-size: x-large;
+    position: absolute;
+    left: 87%;
+    top: 5%;
+}
+
+.Label-logo {
+    color: #634911;
+    font-size: 40px;
+}
+
