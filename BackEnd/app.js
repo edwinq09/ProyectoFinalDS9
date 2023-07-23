@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Importar los módulos necesarios
 const express = require('express');
 const mysql = require('mysql2');
@@ -56,32 +56,3 @@ const port = process.env.PORT || 3000; // Puerto del servidor
 app.listen(port, () => {
   console.log(`Servidor Express en funcionamiento en el puerto ${port}`);
 });
-
-
-
-
-=======
-const config = require('./dbconfig');
-
-const rest = new (require('rest-mssql-nodejs'))({
-
-    user: config.user,
-    password: config.password,
-    server: config.server,
-    database: config.database
-
-}
-);
-
-setTimeout(async () => {
-
-    const resultado = await rest.executeStoredProcedure('sp_buscar_producto',null,{
-        i_operacion: 'Qi',
-        i_pr_id:2
-
-    });
-
-    console.log(resultado.data);
-    
-}, 1500);
->>>>>>> cab74cf52dcd2e6d40062fbdc751dbf8468414f6
