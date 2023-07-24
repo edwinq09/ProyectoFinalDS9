@@ -9,9 +9,9 @@
 <body>
     <div class="container">
         <h1>Login</h1>
-        <form action="PHP/login.php" method="POST">
-            <input type="email" name="email" placeholder="Ingrese su email" required>
-            <input type="password" name="password" placeholder="Ingrese su contraseña" required><br>
+        <form  id="login" action="" method="POST">
+            <input type="email" name="email" id="correo" placeholder="Ingrese su email" required>
+            <input type="password" name="password"  id="contrasena"  placeholder="Ingrese su contraseña" required><br>
             <div class="btn">
             <button type="submit">Ingresar</button>
             <button type="button" onclick="location.href='register.html'">Registrarse</button>
@@ -21,4 +21,5 @@
     </div>
 
 </body>
+<script src="login.js"></script>
 </html>

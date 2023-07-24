@@ -93,8 +93,36 @@ section h2 {
   margin-left: 20px;
   padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 5px;
   border-color: #D9D9D9;
   border-style: inset;
+}
+
+/* Columnas  */
+
+.list-group{
+  display: grid;
+  grid-template-rows: 300px 200px 100px 100px;
+  grid-template-columns: 250px 250px 250px 200px;
+  grid-gap:100px;
+}
+
+
+.list-group-items{
+  text-align: center;
+  border: black 5px solid;
+  grid-column-start: 1; 
+  grid-column-end: 5; 
+  grid-row-start: 1; 
+  grid-row-end: 3;
+
+  
+
+}
+
+.list-group-image{
+
+  width:200px;
+  height:200px;
 }

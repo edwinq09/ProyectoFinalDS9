@@ -34,7 +34,7 @@ CREATE TABLE `productos` (
   `imagen` varchar(700) NOT NULL,
   `tipo` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (6,'HP ProBook 440 G9 – 14.0','HP',' HD, Intel Core i5-1235U a 4.4GHz, 8GB DDR4, 512GB SSD, Webcam, WiFi, Bluetooth, Gráficos Intel Iris Xe, Windows 11 Pro 64 bits, Español',24,895.9,'https://drive.google.com/file/d/1O6mOZvLQHdAXztoSMV7JtEPA-V1gDdRO/view?usp=sharing','Laptop'),(7,'Laptop HP 14z-fq1000- 14',' HP',' HD ,AMD Ryzen 3 5300U a 3.8GHz, 8GB DDR4, 256GB SSD, Gráficos AMD Radeon, Windows 11 Home, Inglés + Antivirus Karspesky GRATIS',34,450.9,'https://drive.google.com/file/d/1Dxttk1IJrYwiDPbQwSof9QPjTul2wUmf/view?usp=sharing','Laptop '),(8,'HP Pavilion 15-eh1509la',' HP','15.6″ HD, AMD Ryzen 5 5 5500U a 2.1GHz, 8GB DDR4, 512GB SSD, Windows 11 Home 64-bits, Español + Mochila HP Renew 15.6″ Azul ',26,659.9,'https://drive.google.com/file/d/1Dxttk1IJrYwiDPbQwSof9QPjTul2wUmf/view?usp=sharing','Laptop'),(9,'Lenovo IdeaPad Flex 5 ','lenovo','Táctil Full HD, Intel Core i3-1115G4 a 3.0GHz, 4GB DDR4, 128GB SSD, Webcam, WiFi, Bluetooth, Gráficos Intel UHD, Windows 11 Home 64-bit, Inglés, Gris',8,455.9,'https://drive.google.com/file/d/1wcbQTBn6U0Fv4hZZAOx9VhHnlszg-YDP/view?usp=drive_link','Laptop'),(10,'Dell Inspiron 15 3511 – 15.6 ','Dell','FHD, Intel Core i5-1135G7 a 2.40GHz, 8GB DDR4, 256GB SSD, Gráficos Iris Xe, Webcam, WiFi, Bluetooth, Windows 11 Home 64-bits, Español, Plateado',10,675.9,'https://drive.google.com/file/d/1RHPahycaQP-0Mim28sv6SDGME5Zoa5gd/view?usp=drive_link','Laptop'),(11,'Lenovo ThinkBook 14 Gen 2 ','Lenovo','Full HD, Intel Core i5-1135G7 a 2.40GHz, 16GB DDR4, 256GB SSD, Webcam, WiFi, Bluetooth, Gráficos Intel Iris Xe, Windows 11 Pro 64-bit, Español',31,990.8,'https://drive.google.com/file/d/15dpBgehrpu_JUpAUaWVYwix6hL5CSEUX/view?usp=drive_link','Laptop');
+INSERT INTO `productos` VALUES (32,'HP ProBook 440 G9 – 14.0','HP',' HD, Intel Core i5-1235U a 4.4GHz, 8GB DDR4, 512GB SSD, Webcam, WiFi, Bluetooth, Gráficos Intel Iris Xe, Windows 11 Pro 64 bits, Español',24,895.9,'/HP Pavilion 15-eh1509la.jpg','Laptop'),(33,'Laptop HP 14z-fq1000- 14',' HP',' HD ,AMD Ryzen 3 5300U a 3.8GHz, 8GB DDR4, 256GB SSD, Gráficos AMD Radeon, Windows 11 Home, Inglés + Antivirus Karspesky GRATIS',34,450.9,'/HP Pavilion 15-eh1509la.jpg','Laptop '),(34,'HP Pavilion 15-eh1509la',' HP','15.6″ HD, AMD Ryzen 5 5 5500U a 2.1GHz, 8GB DDR4, 512GB SSD, Windows 11 Home 64-bits, Español + Mochila HP Renew 15.6″ Azul ',26,659.9,'/HP Pavilion 15-eh1509la.jpg','Laptop'),(35,'Lenovo IdeaPad Flex 5 ','lenovo','Táctil Full HD, Intel Core i3-1115G4 a 3.0GHz, 4GB DDR4, 128GB SSD, Webcam, WiFi, Bluetooth, Gráficos Intel UHD, Windows 11 Home 64-bit, Inglés, Gris',8,455.9,'/Lenovo IdeaPad Flex 5.jpeg','Laptop'),(36,'Dell Inspiron 15 3511 – 15.6 ','Dell','FHD, Intel Core i5-1135G7 a 2.40GHz, 8GB DDR4, 256GB SSD, Gráficos Iris Xe, Webcam, WiFi, Bluetooth, Windows 11 Home 64-bits, Español, Plateado',10,675.9,'/Dell Inspiron 15 3511.jpg','Laptop'),(37,'Dell Inspiron 14 5410 2 en 1','Dell','Intel Core i5-1155G7 a 2.5GHz, 14″ Táctil, 8GB DDR4, 256GB SSD, WiFi, Bluetooth , HDMI , USB, Windows 11 home 64-bits, Español, Plateado',11,829.9,'/Dell Inspiron14 5410.jpeg','Laptop'),(38,'Lenovo IdeaPad – 14','Lenovo',' Intel Core i3-1215U a 1.2GHz, 4GB DDR4, 128GB SSD, Webcam, WiFi, Bluetooth, Gráficos Intel UHD, Windows 11 Home 64-bit, Inglés, Gris',13,359.9,'/Lenovo IdeaPad – 14.jpeg','Laptop'),(39,'Lenovo ThinkBook 15 Gen 2 ','Lenovo','Full HD, Intel Core i5-1135G7 a 2.40GHz, 16GB DDR4, 256GB SSD, Webcam, WiFi, Bluetooth, Gráficos Intel Iris Xe, Windows 11 Pro 64-bit, Español',31,990.8,'/Dell Inspiron 15 3511.jpg','Laptop');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,13 +55,15 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
-  `id` int NOT NULL,
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(20) NOT NULL,
   `apellido` varchar(20) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `contrasena` varchar(45) NOT NULL,
+  `trn` int NOT NULL,
+  `cedula` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,6 +72,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'admin','admin','admin@gmail.com','123456',123,'8-888-8888');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,4 +93,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-23 13:53:37
+-- Dump completed on 2023-07-23 23:14:51

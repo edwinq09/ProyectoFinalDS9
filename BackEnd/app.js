@@ -3,8 +3,10 @@
 const express = require('express');
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
+const cors = require('cors');
 dotenv.config();
 const app = express();
+app.use(cors());
 
 
 
@@ -31,20 +33,43 @@ connection.connect((err) => {
 
 //rutas de Express
 app.get('/Principal', (req, res) => {
-  
+
   // Consulta SQL a ejecutar
-connection.query('SELECT * FROM productos', (err, results) => {
-  if (err) 
-    throw err;
+  connection.query('SELECT * FROM productos', (err, results) => {
+    if (err)
+      throw err;
+    res.json(results);
+
+  });
+  
+
+});
+
+//rutas de Express
+app.get('/detalles', (req, res) => {
+  const id = req.query.id;
+
+  // Consulta SQL a ejecutar
+  connection.query(`SELECT * FROM productos where id = ${id} `, (err, results) => {
+    if (err)
+      throw err;
+    res.json(results);
+
+  });
+ 
+});
+
+app.get('/login', (req, res) => {
+  const correo = req.query.correo;
+  const contasena = req.query.contasena;
+  connection.query(`SELECT * FROM usuarios where correo = "${correo}" and contrasena = "${contasena}" `, (err, results) => {
+    if (err)
+      throw err;
     res.json(results);
     
+
+  });
 });
-
-
-  
-
-});
-
 
 
 app.get('/', (req, res) => {
