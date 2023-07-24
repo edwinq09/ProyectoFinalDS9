@@ -15,9 +15,10 @@ form.addEventListener('submit', (event) => {
 
             } else {
 
-                console.log(data);
-                window.location.href = "Principal.html";
+                localStorage.setItem("botonBloqueado", "true");
                 
+                window.location.href = "Principal.html";
+
             }
 
         })
