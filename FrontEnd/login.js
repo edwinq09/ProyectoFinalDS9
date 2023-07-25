@@ -15,8 +15,20 @@ form.addEventListener('submit', (event) => {
 
             } else {
 
-                localStorage.setItem("botonBloqueado", "true");
-                
+
+                const usuario = data[0];
+
+                // Crear un objeto con los datos del usuario
+                const datosUsuario = {
+                    nombre: usuario.nombre,
+                    apellido: usuario.apellido,
+                    trn: usuario.trn
+                };
+
+                console.log(datosUsuario);
+
+                const datosUsuarioJSON = JSON.stringify(datosUsuario);
+                localStorage.setItem('usuario', datosUsuarioJSON);
                 window.location.href = "Principal.html";
 
             }

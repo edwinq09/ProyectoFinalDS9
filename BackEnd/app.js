@@ -74,15 +74,35 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
   const nombre = req.query.nombre;
   const apellido = req.query.apellido;
-  const correo = req.query.correo;
-  const contrasena = req.query.contrasena;
+  const correo = req.query.email;
+  const contrasena = req.query.password;
   const dni = req.query.dni;
   console.log(nombre);
-  connection.query(`INSERT INTO usuarios (nombre, apellido, correo, contrasena, dni, rtn) VALUES ("${nombre}", "${apellido}", "${correo}", "${contrasena}", "${dni}","678" )`, (err, results) => {
+
+  connection.query(`SELECT * FROM usuarios where cedula = "${dni}" `, (err, results) => {
     if (err)
-      throw err;
-    res.json(results);
-    console.log(results);
+    throw err;
+
+    if (results.length === 0) {
+      connection.query(`INSERT INTO usuarios (nombre, apellido, correo, contrasena, trn, cedula) VALUES ("${nombre}", "${apellido}", "${correo}", "${contrasena}", "678" , "${dni}")`, (err, results) => {
+        if (err) {
+          console.error('Error al insertar en la base de datos:', err);
+          res.json(1);
+        } else {
+          connection.query(`SELECT * FROM usuarios where cedula = "${dni}" `, (err, results) => {
+            res.json(results);
+          });
+        }
+      });
+
+
+
+    } else {
+      console.log("entre")
+      res.json(results);
+    }
+
+    
   });
 });
 
