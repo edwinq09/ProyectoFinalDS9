@@ -183,9 +183,11 @@ h4 {
 .custom-paragraph {
   font-size: 24px; /* Tamaño de fuente más grande, puedes ajustar el valor según tus preferencias */
   color: #A1432E; /* Color rojo, puedes cambiar el código de color según tus preferencias */
+  font-weight: bold;
 }
 
 .custom-paragraph-p {
   font-size: 20px; /* Tamaño de fuente más grande, puedes ajustar el valor según tus preferencias */
   color: #A1432E; /* Color rojo, puedes cambiar el código de color según tus preferencias */
+  font-weight: bold;
 }
