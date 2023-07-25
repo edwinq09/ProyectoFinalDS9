@@ -35,29 +35,29 @@
 
 
   <script>
-    const monto = localStorage.getItem('monto')
-
+    const monto = localStorage.getItem('monto');
     paypal.Buttons({
-      createOrder() {
-        return fetch(`http://localhost:3001/payment/create?monto=${monto}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            cart: [
-              {
-                sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
-                quantity: "YOUR_PRODUCT_QUANTITY",
-              },
-            ]
+        createOrder() {
+          return fetch(`http://localhost:3001/payment/create?monto=${monto}`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              cart: [
+                {
+                  sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+                  quantity: "YOUR_PRODUCT_QUANTITY",
+                },
+              ]
+            })
           })
-        })
           .then((response) => response.json())
           .then((order) => order.id);
-      }
-    }).render('#paypal-button-container');
+        }
+      }).render('#paypal-button-container');
   </script>
+  
 
 </body>
 

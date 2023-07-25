@@ -21,6 +21,8 @@ async function generateAccessToken() {
 
 
 module.exports = async (req, res) => {
+  const monto = req.query.monto;
+
   const accessToken = await generateAccessToken();
   const url = `${baseUrl.sandbox}/v2/checkout/orders`;
   const response = await fetch(url, {
@@ -35,12 +37,13 @@ module.exports = async (req, res) => {
         {
           amount: {
             currency_code: "USD",
-            value: 100.00,
+            value: monto,
           },
         },
       ],
     }),
   });
   const data = await response.json();
+  console.log({ data })
   return data;
 };

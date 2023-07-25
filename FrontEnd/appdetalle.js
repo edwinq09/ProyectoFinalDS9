@@ -22,11 +22,12 @@ fetch(`http://localhost:3000/detalles?id=${id}`)
             <p id='Precio'>Precio: ${products.precio}</p>
             `;
             listaproductos.appendChild(listItem);
-
-           
-           
         });
 
-        localStorage.setItem('monto', 0);
+        const producto = data[0];
+        const monto = producto.precio;
+
+
+        localStorage.setItem('monto', monto);
     })
 

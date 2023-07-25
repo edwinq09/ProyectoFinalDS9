@@ -9,6 +9,7 @@ const createOrder = require('./createOrder');
 app.use(cors());
 
 app.post('/payment/create', async (req, res) => {
+
   const order = await createOrder(req, res);
   res.json(order);
 });
