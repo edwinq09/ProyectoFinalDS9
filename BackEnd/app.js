@@ -41,7 +41,7 @@ app.get('/Principal', (req, res) => {
     res.json(results);
 
   });
-  
+
 
 });
 
@@ -56,7 +56,7 @@ app.get('/detalles', (req, res) => {
     res.json(results);
 
   });
- 
+
 });
 
 app.get('/login', (req, res) => {
@@ -66,8 +66,23 @@ app.get('/login', (req, res) => {
     if (err)
       throw err;
     res.json(results);
-    
 
+
+  });
+});
+
+app.get('/register', (req, res) => {
+  const nombre = req.query.nombre;
+  const apellido = req.query.apellido;
+  const correo = req.query.correo;
+  const contrasena = req.query.contrasena;
+  const dni = req.query.dni;
+  console.log(nombre);
+  connection.query(`INSERT INTO usuarios (nombre, apellido, correo, contrasena, dni, rtn) VALUES ("${nombre}", "${apellido}", "${correo}", "${contrasena}", "${dni}","678" )`, (err, results) => {
+    if (err)
+      throw err;
+    res.json(results);
+    console.log(results);
   });
 });
 
