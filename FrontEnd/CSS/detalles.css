@@ -121,7 +121,7 @@ section h2 {
   border: 2px solid black;
   width:200px;
   height:200px;
-  animation: ejemploAnimacion 2s ;
+  transition: transform 0.3s; /* Agregar una transición suave de 0.3 segundos a la propiedad transform */
 }
 
 h4 {
@@ -136,9 +136,24 @@ h4 {
   left: 12%;
 }
 
+/* Aplicar la animación cuando el mouse está sobre el div */
+.list-group-image:hover {
+  transform: scale(1.2); /* Escala el div al 120% cuando el mouse está sobre él */
+}
+
 /* Definición de la animación */
 @keyframes ejemploAnimacion {
   0% { transform: scale(1); } /* Estado inicial (escala 1) */
   50% { transform: scale(1.2); } /* Escala al 120% a la mitad de la animación */
   100% { transform: scale(1); } /* Regresar a la escala 1 al final de la animación */
+}
+
+/* Estilo para la imagen */
+.list-group-image img {
+  transition: opacity 0.9s; /* Agregar una transición suave de 0.3 segundos a la propiedad de opacidad */
+}
+
+/* Aplicar la animación cuando el mouse está sobre la imagen */
+.list-group-image:hover img {
+  opacity: 1.7; /* Reducir la opacidad al 70% cuando el mouse está sobre la imagen */
 }
