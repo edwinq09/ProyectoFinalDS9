@@ -116,13 +116,21 @@ section h2 {
   grid-column-end: 5; 
   grid-row-start: 1; 
   grid-row-end: 3;
-
-  
-
 }
 
 .list-group-image{
-
   width:200px;
   height:200px;
+}
+
+h4 {
+  position: fixed;
+  top: 95px;
+  left: 67%;
+}
+
+.btn-admin{
+  position: fixed;
+  top: 33.5%;
+  left: 12%;
 }
