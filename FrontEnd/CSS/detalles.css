@@ -260,3 +260,22 @@ form select{
   border-color: #DAFFFB;
   padding: 5px;
 }
+.detalle-img{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.custom-paragraph {
+  font-size: 24px; /* Tamaño de fuente más grande, puedes ajustar el valor según tus preferencias */
+  color: #A1432E; /* Color rojo, puedes cambiar el código de color según tus preferencias */
+  font-weight: bold;
+}
+
+.custom-paragraph-p {
+  font-size: 20px; /* Tamaño de fuente más grande, puedes ajustar el valor según tus preferencias */
+  color: #A1432E; /* Color rojo, puedes cambiar el código de color según tus preferencias */
+  font-weight: bold;
+}
