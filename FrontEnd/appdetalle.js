@@ -2,11 +2,13 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 
 let monto1 = 0;
-
 fetch(`http://localhost:3000/detalles?id=${id}`)
     .then(response => response.json())
     .then(data => {
-        const ruta_imagenes ="C:\imagenes_des9";
+
+
+        localStorage.clear();
+        const ruta_imagenes = "C:\imagenes_des9";
         const section = document.querySelector('.contCompDet'); // Cambio de getElementById a querySelector
         const listaproductos = document.createElement('div');
         section.appendChild(listaproductos);
@@ -24,10 +26,7 @@ fetch(`http://localhost:3000/detalles?id=${id}`)
             listaproductos.appendChild(listItem);
         });
 
-        const producto = data[0];
-        const monto = producto.precio;
-
-
         localStorage.setItem('monto', monto);
+
     })
 

@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="CSS/detalles.css" rel="stylesheet" type="text/css">
   <title>PcLol</title>
+ 
 </head>
 
 <body>
-
 
   <section class="nav">
     <h1>PcLol</h1>
@@ -55,12 +55,12 @@
           .then((response) => response.json())
           .then((order) => order.id);
         }
-      }).render('#paypal-button-container');
+      }).render('#paypal-button-container');   
   </script>
   
 
 </body>
 
-<script src="appdetalle.js"></script>
+<script src="appdetalle.js">location.reload();</script>
 
 </html>
