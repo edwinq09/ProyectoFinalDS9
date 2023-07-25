@@ -106,12 +106,11 @@ section h2 {
   grid-template-rows: 300px 200px 100px 100px;
   grid-template-columns: 250px 250px 250px 200px;
   grid-gap:100px;
+  
 }
 
 
 .list-group-items{
-  text-align: center;
-  border: black 5px solid;
   grid-column-start: 1; 
   grid-column-end: 5; 
   grid-row-start: 1; 
@@ -119,18 +118,27 @@ section h2 {
 }
 
 .list-group-image{
+  border: 2px solid black;
   width:200px;
   height:200px;
+  animation: ejemploAnimacion 2s ;
 }
 
 h4 {
-  position: fixed;
+  position: absolute;
   top: 95px;
   left: 67%;
 }
 
 .btn-admin{
-  position: fixed;
-  top: 33.5%;
+  position: absolute;
+  top: 20.5%;
   left: 12%;
+}
+
+/* Definición de la animación */
+@keyframes ejemploAnimacion {
+  0% { transform: scale(1); } /* Estado inicial (escala 1) */
+  50% { transform: scale(1.2); } /* Escala al 120% a la mitad de la animación */
+  100% { transform: scale(1); } /* Regresar a la escala 1 al final de la animación */
 }
