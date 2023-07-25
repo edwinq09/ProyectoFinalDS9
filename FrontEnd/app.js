@@ -17,7 +17,7 @@
         listItem.setAttribute('class', 'list-group-item');
 
         listItem.innerHTML = `  
-          <a href="detalles.html?id=${products.id}">   <img class = 'list-group-image' src="${ruta_imagenes + products.imagen}" alt="${ruta_imagenes}" width="100" height="100"></a>
+          <a href="detalles.html?id=${products.id}&monto=${products.precio}">   <img class = 'list-group-image' src="${ruta_imagenes + products.imagen}" alt="${ruta_imagenes}" width="100" height="100"></a>
           <p>${products.producto}</p>
           <p>Precio: ${products.precio}</p>
           
@@ -30,7 +30,6 @@
 
       if (datosUsuario !== null) {
         trn = datosUsuario.trn;
-        console.log(trn);
       }
 
       if (trn === 678) {

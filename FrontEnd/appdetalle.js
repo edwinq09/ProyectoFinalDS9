@@ -7,7 +7,6 @@ fetch(`http://localhost:3000/detalles?id=${id}`)
     .then(data => {
 
 
-        localStorage.clear();
         const ruta_imagenes = "C:\imagenes_des9";
         const section = document.querySelector('.contCompDet'); // Cambio de getElementById a querySelector
         const listaproductos = document.createElement('div');
@@ -26,7 +25,11 @@ fetch(`http://localhost:3000/detalles?id=${id}`)
             listaproductos.appendChild(listItem);
         });
 
-        localStorage.setItem('monto', monto);
+        
+            const producto = data[0];
+            const monto = producto.precio;
+            localStorage.setItem('monto', monto);
+
 
     })
 
