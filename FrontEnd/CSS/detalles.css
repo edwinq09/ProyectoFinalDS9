@@ -97,6 +97,7 @@ section h2 {
   border-radius: 5px;
   border-color: #D9D9D9;
   border-style: inset;
+
 }
 
 /* Columnas  */
@@ -156,4 +157,17 @@ h4 {
 /* Aplicar la animación cuando el mouse está sobre la imagen */
 .list-group-image:hover img {
   opacity: 1.7; /* Reducir la opacidad al 70% cuando el mouse está sobre la imagen */
+}
+
+.contCompDet{
+  background-color: #ffffff;
+  width: 92%;
+  height: 70%;
+  margin-left: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border-color: #D9D9D9;
+  border-style: inset;
+  display: flex;
+  flex-direction:row-reverse;
 }

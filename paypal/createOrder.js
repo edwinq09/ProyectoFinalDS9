@@ -35,13 +35,12 @@ module.exports = async (req, res) => {
         {
           amount: {
             currency_code: "USD",
-            value: "100.00",
+            value: 100.00,
           },
         },
       ],
     }),
   });
   const data = await response.json();
-  console.log({ data })
   return data;
 };
